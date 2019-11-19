@@ -26,6 +26,7 @@ public:
 	CString m_sParity;
 	CString m_sDataBit;
 	CString m_sStopBit;
+	CString m_sHandshake;
 	BOOL    m_bFlowChk;
 
 	OVERLAPPED m_OLR, m_OLW;

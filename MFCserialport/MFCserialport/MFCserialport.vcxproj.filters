@@ -62,10 +62,10 @@
     <Image Include="res\MFCserialport.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\gumi.bmp">
+    <Image Include="res\aaa.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\Downloads\aaa.ico">
+    <Image Include="res\gumi.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

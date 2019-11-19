@@ -1,5 +1,5 @@
 ﻿  MFCserialport.cpp
   MFCserialportDlg.cpp
-c:\users\jaewan\desktop\aaaaa\mfcserialport\mfcserialport\mfcserialportdlg.cpp(250): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\jaewan\documents\github\mfcserial\mfcserialport\mfcserialport\mfcserialportdlg.cpp(250): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   코드를 생성하고 있습니다...
-  MFCserialport.vcxproj -> C:\Users\Jaewan\Desktop\aaaaa\MFCserialport\Debug\MFCserialport.exe
+  MFCserialport.vcxproj -> C:\Users\Jaewan\Documents\GitHub\MFCserial\MFCserialport\Debug\MFCserialport.exe

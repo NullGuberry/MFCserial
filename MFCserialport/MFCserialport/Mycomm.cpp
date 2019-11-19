@@ -21,6 +21,7 @@ CMycomm::CMycomm(CString port, CString baudrate, CString parity, CString databit
 	m_sParity = parity;
 	m_sDataBit = databit;
 	m_sStopBit = stopbit;
+	m_sHandshake = handshake;
 	m_bFlowChk = 1;
 	m_bIsOpenned = FALSE;
 	m_nLength = 0;
@@ -124,9 +125,12 @@ void CMycomm::ResetSerial()
 	else if (m_sStopBit == "2 Bit")
 		dcb.StopBits = TWOSTOPBITS;
 
-	dcb.fRtsControl = RTS_CONTROL_ENABLE;
-	dcb.fDtrControl = DTR_CONTROL_ENABLE;
-	dcb.fOutxDsrFlow = FALSE;
+	if (m_sHandshake == "RTS")
+		dcb.fRtsControl = RTS_CONTROL_ENABLE;
+	else if (m_sHandshake == "DTR")
+		dcb.fDtrControl = DTR_CONTROL_ENABLE;
+	else if (m_sHandshake == "None")
+		dcb.fOutxDsrFlow = FALSE;
 
 	if (m_bFlowChk) {
 		dcb.fOutX = FALSE;

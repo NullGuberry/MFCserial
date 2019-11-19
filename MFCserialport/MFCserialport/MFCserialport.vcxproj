@@ -204,8 +204,8 @@
     <None Include="res\MFCserialport.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Downloads\aaa.ico" />
-    <Image Include="..\..\..\gumi.bmp" />
+    <Image Include="res\aaa.ico" />
+    <Image Include="res\gumi.bmp" />
     <Image Include="res\MFCserialport.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
