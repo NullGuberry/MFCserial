@@ -60,4 +60,6 @@ public:
 	afx_msg void OnCbnSelchangeComboHandshake();
 	afx_msg void OnBnClickedBtClose();
 	afx_msg void OnBnClickedBtSend();
+	afx_msg void OnEnChangeEditRcvView();
+	afx_msg void OnEnChangeEditSendData();
 };

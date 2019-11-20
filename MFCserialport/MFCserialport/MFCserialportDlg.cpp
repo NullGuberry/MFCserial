@@ -95,6 +95,8 @@ BEGIN_MESSAGE_MAP(CMFCserialportDlg, CDialogEx)
 	ON_CBN_SELCHANGE(IDC_COMBO_HANDSHAKE, &CMFCserialportDlg::OnCbnSelchangeComboHandshake)
 	ON_BN_CLICKED(IDC_BT_CLOSE, &CMFCserialportDlg::OnBnClickedBtClose)
 	ON_BN_CLICKED(IDC_BT_SEND, &CMFCserialportDlg::OnBnClickedBtSend)
+	ON_EN_CHANGE(IDC_EDIT_RCV_VIEW, &CMFCserialportDlg::OnEnChangeEditRcvView)
+	ON_EN_CHANGE(IDC_EDIT_SEND_DATA, &CMFCserialportDlg::OnEnChangeEditSendData)
 END_MESSAGE_MAP()
 
 
@@ -172,7 +174,7 @@ BOOL CMFCserialportDlg::OnInitDialog()
 	comport_state = false;
 	GetDlgItem(IDC_BT_CONNECT)->SetWindowText(_T("OPEN"));
 	m_str_comport = _T("COM5");
-	m_str_baudrate = _T("115200");
+	m_str_baudrate = _T("9600");
 	m_str_databit = _T("8 Bit");
 	m_str_stopbit = _T("1 Bit");
 	m_str_parity = _T("None");
@@ -348,5 +350,28 @@ void CMFCserialportDlg::OnBnClickedBtSend()
 	GetDlgItem(IDC_EDIT_SEND_DATA)->GetWindowText(str);
 	str += "\r\n";
 	m_comm->Send(str, str.GetLength());
+	m_edit_rcv_view.SetWindowText(str);
 }
 
+
+
+void CMFCserialportDlg::OnEnChangeEditRcvView()
+{
+	// TODO:  RICHEDIT 컨트롤인 경우, 이 컨트롤은
+	// CDialogEx::OnInitDialog() 함수를 재지정 
+	//하고 마스크에 OR 연산하여 설정된 ENM_CHANGE 플래그를 지정하여 CRichEditCtrl().SetEventMask()를 호출하지 않으면
+	// 이 알림 메시지를 보내지 않습니다.
+
+	// TODO:  여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
+
+
+void CMFCserialportDlg::OnEnChangeEditSendData()
+{
+	// TODO:  RICHEDIT 컨트롤인 경우, 이 컨트롤은
+	// CDialogEx::OnInitDialog() 함수를 재지정 
+	//하고 마스크에 OR 연산하여 설정된 ENM_CHANGE 플래그를 지정하여 CRichEditCtrl().SetEventMask()를 호출하지 않으면
+	// 이 알림 메시지를 보내지 않습니다.
+
+	// TODO:  여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
